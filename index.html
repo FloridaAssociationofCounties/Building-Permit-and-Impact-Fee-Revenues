@@ -188,8 +188,8 @@
   <canvas class="fade-in" id="medicaid" style="position: realtive; height: 80vh; width: 90vw; padding: 0.5%;"></canvas>
     <p><a href="FAC Medicaid County Contributions.xlsx" style="color: white; float: left; font-size: 22px; margin-left: 1%;" download><u>Download the entire Microsoft Excel file</u></a></p>
     <script type="text/javascript">
-      var data;
-      d3.csv("data/building_permit_fees.csv").then(function(csv_data) { csv_data = data; });
+      var csv_data;
+      d3.csv("data/building_permit_fees.csv").then(function(data) { csv_data = data; });
       var ctx = document.getElementById('medicaid').getContext('2d');
       var drugOverdosesChart = new Chart(ctx, {
     type: 'line',
@@ -197,7 +197,7 @@
         labels: ["1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
         datasets: [{
             label: '100% of Growth Starting in 2020-21',
-            data: [data[0]['1993'], data[0]['1994'], data[0]['1995'], data[0]['1996'], data[0]['1997'], data[0]['1998'], data[0]['1999'], data[0]['2000'], data[0]['2001'], data[0]['2002'], data[0]['2003'], data[0]['2004'], data[0]['2005'], data[0]['2006'], data[0]['2007'], data[0]['2008'], data[0]['2009'], data[0]['2010'], data[0]['2011'], data[0]['2012'], data[0]['2013'], data[0]['2014'], data[0]['2015'], data[0]['2016']],
+            data: [csv_data[0]['1993'], csv_data[0]['1994'], csv_data[0]['1995'], csv_data[0]['1996'], csv_data[0]['1997'], csv_data[0]['1998'], csv_data[0]['1999'], csv_data[0]['2000'], csv_data[0]['2001'], csv_data[0]['2002'], csv_data[0]['2003'], csv_data[0]['2004'], csv_data[0]['2005'], csv_data[0]['2006'], csv_data[0]['2007'], csv_data[0]['2008'], csv_data[0]['2009'], csv_data[0]['2010'], csv_data[0]['2011'], csv_data[0]['2012'], csv_data[0]['2013'], csv_data[0]['2014'], csv_data[0]['2015'], csv_data[0]['2016']],
             backgroundColor: 'rgba(255, 59, 70, 0.4)',
             borderColor: 'rgba(255, 59, 70, 1)',
             borderWidth: 1,
@@ -207,7 +207,7 @@
           },
           {
           	label: "50% of Growth Starting in 2020-21",
-          	data: [data[2]['1993'], data[2]['1994'], data[2]['1995'], data[2]['1996'], data[2]['1997'], data[2]['1998'], data[2]['1999'], data[2]['2000'], data[2]['2001'], data[2]['2002'], data[2]['2003'], data[2]['2004'], data[2]['2005'], data[2]['2006'], data[2]['2007'], data[2]['2008'], data[2]['2009'], data[2]['2010'], data[2]['2011'], data[2]['2012'], data[2]['2013'], data[2]['2014'], data[2]['2015'], data[2]['2016']],
+          	data: [csv_data[2]['1993'], csv_data[2]['1994'], csv_data[2]['1995'], csv_data[2]['1996'], csv_data[2]['1997'], csv_data[2]['1998'], csv_data[2]['1999'], csv_data[2]['2000'], csv_data[2]['2001'], csv_data[2]['2002'], csv_data[2]['2003'], csv_data[2]['2004'], csv_data[2]['2005'], csv_data[2]['2006'], csv_data[2]['2007'], csv_data[2]['2008'], csv_data[2]['2009'], csv_data[2]['2010'], csv_data[2]['2011'], csv_data[2]['2012'], csv_data[2]['2013'], csv_data[2]['2014'], csv_data[2]['2015'], csv_data[2]['2016']],
           	backgroundColor: 'rgba(54, 162, 235, 0.4)',
           	borderColor: 'rgba(54, 162, 235, 1)',
           	borderWidth: 1,
