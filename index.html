@@ -15,7 +15,7 @@
   <script type="text/javascript">
   	d3.csv("data/building_permit_fees.csv")
   	  .then(function(data) {
-  	  	console.log(data[0]['1993']);
+  	  	return data[0]['1993'];
   	  });
   </script>
 </body>
