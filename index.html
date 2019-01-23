@@ -13,7 +13,7 @@
 <body>
   <h1>:)</h1>
   <script type="text/javascript">
-  	d3.csv("/data/building_permit_fees.csv").then(function(data) {
+  	d3.csv("data/building_permit_fees.csv", type, function(error, data) {
   		console.log(data[0]);
   	});
   </script>
