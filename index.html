@@ -188,8 +188,8 @@
   <canvas class="fade-in" id="medicaid" style="position: realtive; height: 80vh; width: 90vw; padding: 0.5%;"></canvas>
     <p><a href="FAC Medicaid County Contributions.xlsx" style="color: white; float: left; font-size: 22px; margin-left: 1%;" download><u>Download the entire Microsoft Excel file</u></a></p>
     <script type="text/javascript">
-      var csv_data;
-      d3.csv("data/building_permit_fees.csv").then(function(data) { csv_data = data; });
+      d3.csv("data/building_permit_fees.csv").then(function(data) {
+      var csv_data = data;
       var ctx = document.getElementById('medicaid').getContext('2d');
       var drugOverdosesChart = new Chart(ctx, {
     type: 'line',
@@ -264,7 +264,7 @@
           }
         }
     }
-});
+});});
   </script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
