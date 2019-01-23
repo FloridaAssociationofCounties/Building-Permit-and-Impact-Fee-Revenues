@@ -235,9 +235,8 @@
                              fontSize: 16,
                              callback: function(value, index, values){
                                         value = value.toString();
-                                        value = value.split(/(?=(?:...)*$)/);
-                                        value = value.join(",");
-                                        return "$" + value;
+                                        value = value.slice(0, -6);
+                                        return "$" + value + "million";
                                        }
                             }
                   }]
