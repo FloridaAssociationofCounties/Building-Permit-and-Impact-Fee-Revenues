@@ -8,14 +8,15 @@
     <title>Fee Revenues</title>
     <script src="assets/d3-fetch.js"></script>
     <script src="assets/d3-fetch.min.js"></script>
-    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
 </head>
 <body>
   <h1>:)</h1>
   <script type="text/javascript">
-  	d3.csv("data/building_permit_fees.csv", type, function(error, data) {
-  		console.log(data[0]);
-  	});
+  	d3.csv("data/building_permit_fees.csv")
+  	  .then(function(data) {
+  	  	console.log(data[0]);
+  	  });
   </script>
 </body>
 </html>
