@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=9;FF=3;OtherUA=4" />
 
     <title>Fee Revenues</title>
 
@@ -12,21 +13,21 @@
     <script src="assets/d3-fetch.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 
-  	<link href="assets/css/bootstrap.css" rel="stylesheet">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<!--external css-->
-  	<link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
 
-  	<!-- Custom styles for this page-->
-  	<link href="assets/css/style.css" rel="stylesheet">
-  	<link href="assets/css/style-responsive.css" rel="stylesheet">
-  	<link href="assets/css/table-responsive.css" rel="stylesheet">
+    <!-- Custom styles for this page-->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+    <link href="assets/css/table-responsive.css" rel="stylesheet">
 
-  	<style>
+    <style>
       @-webkit-keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
       @-moz-keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
       @-o-keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
@@ -192,10 +193,7 @@
     </p>
     <script type="text/javascript">
       d3.csv("data/impact_and_building_permit_fees.csv").then(function(data) {
-      var window.csv_data = data;
-      loadCsvData();
-      });
-      function loadCsvData() {
+      var csv_data = data;
       var ctx = document.getElementById('fees').getContext('2d');
       var feesChart = new Chart(ctx, {
     type: 'bar',
@@ -212,11 +210,11 @@
             pointRadius: 3.5
           },
           {
-          	label: 'Impact Fees',
-          	data: [csv_data[67]['2006'], csv_data[67]['2007'], csv_data[67]['2008'], csv_data[67]['2009'], csv_data[67]['2010'], csv_data[67]['2011'], csv_data[67]['2012'], csv_data[67]['2013'], csv_data[67]['2014'], csv_data[67]['2015'], csv_data[67]['2016']],
-          	backgroundColor: 'rgba(255, 255, 255, 0.8)',
-          	borderColor: 'rgba(255, 255, 255, 1)',
-          	borderWidth: 1,
+            label: 'Impact Fees',
+            data: [csv_data[67]['2006'], csv_data[67]['2007'], csv_data[67]['2008'], csv_data[67]['2009'], csv_data[67]['2010'], csv_data[67]['2011'], csv_data[67]['2012'], csv_data[67]['2013'], csv_data[67]['2014'], csv_data[67]['2015'], csv_data[67]['2016']],
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            borderColor: 'rgba(255, 255, 255, 1)',
+            borderWidth: 1,
             fill: false,
             pointStyle: 'rect',
             pointRadius: 5.5
@@ -265,7 +263,7 @@
           }
         }
     }
-})};
+});});
   </script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
