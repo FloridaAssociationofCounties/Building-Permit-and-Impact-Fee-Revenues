@@ -191,9 +191,8 @@
       <a href="data/FAC Impact Fees 1993-2016.xlsx" style="color: white; font-size: 22px; margin-left: 1%;" download><u>Download Impact Fees Excel File</u></a>
     </p>
     <script type="text/javascript">
-      var csv_data;
       d3.csv("data/impact_and_building_permit_fees.csv").then(function(data) {
-      var csv_data = data;
+      var window.csv_data = data;
       loadCsvData();
       });
       function loadCsvData() {
